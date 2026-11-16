@@ -135,6 +135,17 @@
     .facts strong { display: block; font-weight: 600; font-size: 1.05rem; }
     .facts span { opacity: .8; font-size: .95rem; }
 
+    /* The boat */
+    .boat-lede { font-size: 1.15rem; max-width: 52ch; color: #3d4548; margin: 0 0 36px; }
+    .boat-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .boat-gallery figure { margin: 0; position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 3; background: var(--schist); }
+    .boat-gallery img { width: 100%; height: 100%; object-fit: cover; }
+    .boat-gallery figcaption {
+      position: absolute; left: 12px; bottom: 12px;
+      background: rgba(18,59,62,.8); color: var(--white);
+      font-size: .85rem; padding: 4px 12px; border-radius: 999px;
+    }
+
     /* Credentials */
     .credentials { padding: 72px 0; }
     .cred-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
@@ -206,6 +217,7 @@
         <a href="#experiences">Experiences</a>
         <a href="#about">About Roger</a>
         <a href="#details">Trip details</a>
+        <a href="#boat">The boat</a>
         <a href="#credentials">Safety</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -307,6 +319,21 @@
               <div><strong>Up to 4 passengers</strong><span>Small groups, personal trips.</span></div>
             </li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE BOAT -->
+    <section class="boat" id="boat">
+      <div class="wrap">
+        <p class="eyebrow">The boat</p>
+        <h2 class="section-title">Built for braided rivers</h2>
+        <p class="boat-lede">We operate a six-metre, outboard jet-powered, American-built drift boat, purpose-built for shallow braided rivers.</p>
+        <div class="boat-gallery">
+          <!-- add images/family-boat.jpg -->
+          <figure><img src="images/family-boat.jpg" alt="A family aboard the drift boat on the river" loading="lazy" onerror="this.parentElement.remove()"></figure>
+          <!-- add images/grebe.jpg -->
+          <figure><img src="images/grebe.jpg" alt="Australasian grebe on the water" loading="lazy" onerror="this.parentElement.remove()"><figcaption>Australasian grebe</figcaption></figure>
         </div>
       </div>
     </section>
