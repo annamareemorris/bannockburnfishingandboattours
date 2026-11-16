@@ -137,13 +137,26 @@
 
     /* The boat */
     .boat-lede { font-size: 1.15rem; max-width: 52ch; color: #3d4548; margin: 0 0 36px; }
-    .boat-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .boat-gallery figure { margin: 0; position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 3; background: var(--schist); }
+    .boat-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 820px; }
+    .boat-gallery figure { margin: 0; position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; background: var(--schist); }
     .boat-gallery img { width: 100%; height: 100%; object-fit: cover; }
     .boat-gallery figcaption {
       position: absolute; left: 12px; bottom: 12px;
       background: rgba(18,59,62,.8); color: var(--white);
       font-size: .85rem; padding: 4px 12px; border-radius: 999px;
+    }
+
+    /* What to bring */
+    .bring { padding: 24px 0 48px; }
+    .bring-card {
+      background: var(--river-deep); color: var(--white); border-radius: var(--radius);
+      padding: 44px 48px; display: flex; gap: 40px; align-items: center; justify-content: space-between;
+    }
+    .bring-card .eyebrow { color: var(--tussock); }
+    .bring-card p:not(.eyebrow) { margin: 0 0 .6em; max-width: 56ch; opacity: .92; font-size: 1.08rem; }
+    .bring-card .btn { flex: 0 0 auto; }
+    @media (max-width: 800px) {
+      .bring-card { flex-direction: column; align-items: flex-start; padding: 32px 26px; gap: 24px; }
     }
 
     /* Credentials */
@@ -330,10 +343,25 @@
         <h2 class="section-title">Built for braided rivers</h2>
         <p class="boat-lede">We operate a six-metre, outboard jet-powered, American-built drift boat, purpose-built for shallow braided rivers.</p>
         <div class="boat-gallery">
-          <!-- add images/family-boat.jpg -->
-          <figure><img src="images/family-boat.jpg" alt="A family aboard the drift boat on the river" loading="lazy" onerror="this.parentElement.remove()"></figure>
-          <!-- add images/grebe.jpg -->
-          <figure><img src="images/grebe.jpg" alt="Australasian grebe on the water" loading="lazy" onerror="this.parentElement.remove()"><figcaption>Australasian grebe</figcaption></figure>
+          <!-- images/family-boat.jpeg -->
+          <figure><img src="images/family-boat.jpeg" alt="A family aboard the drift boat on the river" loading="lazy" onerror="this.parentElement.remove()"></figure>
+          <!-- images/grebe.jpeg -->
+          <figure><img src="images/grebe.jpeg" alt="Australasian crested grebes (pūteketeke) on the water" loading="lazy" onerror="this.parentElement.remove()"><figcaption>Australasian crested grebe · pūteketeke</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT TO BRING -->
+    <section class="bring" id="bring">
+      <div class="wrap">
+        <div class="bring-card">
+          <div>
+            <p class="eyebrow">Before you come</p>
+            <h2 class="section-title">What to bring</h2>
+            <p>All you need to bring is a hat, sunglasses and sunscreen. We can provide a picnic lunch and refreshments.</p>
+            <p>If you are going fishing, you need a current fishing licence.</p>
+          </div>
+          <a class="btn btn-primary" href="https://fishandgame.eslltd.co.nz/shop/Fishing%202026%2F27" target="_blank" rel="noopener">Buy a fishing licence</a>
         </div>
       </div>
     </section>
