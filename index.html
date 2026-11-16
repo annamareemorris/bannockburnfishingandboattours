@@ -121,10 +121,8 @@
     /* Trip details */
     .details { background: var(--river-deep); color: var(--white); }
     .details .eyebrow { color: var(--tussock); }
-    .details-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
-    .details-media { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 3; background: linear-gradient(135deg, var(--river) 0%, var(--schist) 100%); }
-    .details-media img { width: 100%; height: 100%; object-fit: cover; }
-    .facts { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 18px; }
+    .details-grid { display: block; }
+    .facts { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 48px; }
     .facts li { display: flex; gap: 16px; align-items: flex-start; }
     .facts .icon {
       flex: 0 0 42px; height: 42px; border-radius: 50%;
@@ -201,7 +199,7 @@
     /* ---------- Responsive ---------- */
     @media (max-width: 900px) {
       .cards { grid-template-columns: 1fr; }
-      .details-grid { grid-template-columns: 1fr; gap: 36px; }
+      .facts { grid-template-columns: 1fr; gap: 18px; }
       .cred-row { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
@@ -308,8 +306,6 @@
     <!-- TRIP DETAILS -->
     <section class="details" id="details">
       <div class="wrap details-grid">
-        <!-- add images/boat.jpg -->
-        <div class="details-media"><img src="images/boat.jpg" alt="Roger's boat on the Cairnmuir Arm" loading="lazy" onerror="this.remove()"></div>
 
         <div>
           <p class="eyebrow">Trip details</p>
