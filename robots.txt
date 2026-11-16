@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bannockburnfishingandboattours.co.nz/sitemap.xml
