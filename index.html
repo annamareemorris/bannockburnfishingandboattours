@@ -1,1 +1,382 @@
 
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bannockburn Fishing and Boat Tours | Lower Kawarau River, Central Otago</title>
+  <meta name="description" content="Fish or tour the lower Kawarau River. See the old gold workings, learn the history and fish the river, by the hour or by the day. Tours start from the Cairnmuir Arm, with transfers to Clyde Old Town. Up to 4 passengers.">
+  <link rel="canonical" href="https://bannockburnfishingandboattours.co.nz/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bannockburn Fishing and Boat Tours">
+  <meta property="og:description" content="Fish or tour the lower Kawarau River. By the hour or by the day. Up to 4 passengers.">
+  <meta property="og:url" content="https://bannockburnfishingandboattours.co.nz/">
+  <meta property="og:image" content="https://bannockburnfishingandboattours.co.nz/images/hero.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --river: #1f5f63;        /* Kawarau blue-green */
+      --river-deep: #123b3e;
+      --schist: #4a4d4f;       /* Central Otago schist */
+      --tussock: #c9a45c;      /* dry tussock gold */
+      --sand: #f4efe6;
+      --ink: #1d2224;
+      --white: #ffffff;
+      --radius: 14px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Work Sans", system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--sand);
+      line-height: 1.6;
+      font-size: 17px;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--river); }
+    h1, h2, h3 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; line-height: 1.15; margin: 0 0 .5em; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+      color: var(--white);
+    }
+    .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+    .brand { font-family: "DM Serif Display", Georgia, serif; font-size: 1.25rem; color: var(--white); text-decoration: none; letter-spacing: .2px; }
+    .nav { display: flex; gap: 28px; }
+    .nav a { color: var(--white); text-decoration: none; font-weight: 500; font-size: .95rem; opacity: .9; }
+    .nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+    .menu-btn { display: none; background: none; border: 1px solid rgba(255,255,255,.6); color: var(--white); border-radius: 8px; padding: 6px 12px; font: inherit; font-size: .9rem; cursor: pointer; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex; align-items: flex-end;
+      color: var(--white);
+      background-color: var(--river-deep);
+      background-image:
+        linear-gradient(180deg, rgba(18,59,62,.55) 0%, rgba(18,59,62,.15) 35%, rgba(18,59,62,.85) 100%),
+        url("images/hero.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 140px 0 72px;
+    }
+    .hero .wrap { width: 100%; }
+    .hero h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); max-width: 14ch; }
+    .hero .lede { font-size: clamp(1.15rem, 2.2vw, 1.45rem); max-width: 34ch; margin: 0 0 32px; opacity: .95; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+    .badge {
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.35);
+      backdrop-filter: blur(4px);
+      padding: 6px 14px; border-radius: 999px; font-size: .9rem; font-weight: 500;
+    }
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 600;
+      padding: 14px 26px; border-radius: 999px; transition: transform .15s ease, background .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--tussock); color: var(--ink); }
+    .btn-primary:hover { background: #d8b673; }
+    .btn-ghost { color: var(--white); border: 1px solid rgba(255,255,255,.7); margin-left: 10px; }
+    .btn-ghost:hover { background: rgba(255,255,255,.12); }
+
+    /* ---------- Sections ---------- */
+    section { padding: 96px 0; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 600; color: var(--river); margin: 0 0 12px; }
+    .section-title { font-size: clamp(2rem, 4vw, 2.8rem); }
+
+    /* Experiences */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
+    .card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06); }
+    .card-media { aspect-ratio: 4 / 3; background: linear-gradient(135deg, var(--river) 0%, var(--schist) 100%); }
+    .card-media img { width: 100%; height: 100%; object-fit: cover; }
+    .card-body { padding: 24px 24px 28px; }
+    .card h3 { font-size: 1.6rem; margin-bottom: .2em; }
+    .card p { margin: 0; color: #4a5356; }
+
+    /* About */
+    .about { padding-top: 0; }
+    .about-grid { display: flex; gap: 56px; align-items: center; }
+    .about-media { flex: 0 0 38%; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; background: var(--schist); }
+    .about-media img { width: 100%; height: 100%; object-fit: cover; }
+    .about-text { flex: 1; max-width: 62ch; }
+    .about-text p:not(.eyebrow) { font-size: 1.08rem; color: #3d4548; margin: 0 0 1em; }
+    @media (max-width: 900px) {
+      .about-grid { flex-direction: column; align-items: stretch; gap: 32px; }
+      .about-media { flex: none; aspect-ratio: 4 / 3; }
+    }
+
+    /* Trip details */
+    .details { background: var(--river-deep); color: var(--white); }
+    .details .eyebrow { color: var(--tussock); }
+    .details-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+    .details-media { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 3; background: linear-gradient(135deg, var(--river) 0%, var(--schist) 100%); }
+    .details-media img { width: 100%; height: 100%; object-fit: cover; }
+    .facts { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 18px; }
+    .facts li { display: flex; gap: 16px; align-items: flex-start; }
+    .facts .icon {
+      flex: 0 0 42px; height: 42px; border-radius: 50%;
+      background: rgba(201,164,92,.18); color: var(--tussock);
+      display: grid; place-items: center;
+    }
+    .facts .icon svg { width: 20px; height: 20px; }
+    .facts strong { display: block; font-weight: 600; font-size: 1.05rem; }
+    .facts span { opacity: .8; font-size: .95rem; }
+
+    /* Credentials */
+    .credentials { padding: 72px 0; }
+    .cred-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
+    .cred {
+      background: var(--white); border-radius: var(--radius); padding: 28px;
+      border-left: 4px solid var(--tussock);
+      box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    }
+    .cred h3 { font-size: 1.4rem; margin-bottom: .25em; }
+    .cred p { margin: 0; color: #4a5356; }
+
+    /* Contact */
+    .contact { background: var(--white); text-align: center; }
+    .contact .section-title { margin-bottom: .3em; }
+    .contact p.lede { max-width: 40ch; margin: 0 auto 32px; color: #4a5356; font-size: 1.1rem; }
+    .contact .phone {
+      display: inline-block; margin-bottom: 28px;
+      font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2.2rem, 6vw, 3.4rem);
+      color: var(--river-deep); text-decoration: none; letter-spacing: .5px;
+    }
+    .contact .phone:hover { color: var(--river); }
+    .contact .btn-primary { background: var(--river); color: var(--white); }
+    .contact .btn-primary:hover { background: var(--river-deep); }
+
+    /* Map */
+    .map-section { padding: 72px 0 96px; }
+    .map-frame {
+      margin-top: 28px; border-radius: var(--radius); overflow: hidden;
+      aspect-ratio: 16 / 9; background: var(--schist);
+      box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.08);
+    }
+    .map-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+    @media (max-width: 720px) { .map-frame { aspect-ratio: 4 / 5; } }
+
+    /* Footer */
+    .site-footer { background: var(--ink); color: rgba(255,255,255,.8); padding: 40px 0; font-size: .92rem; }
+    .site-footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; }
+    .site-footer a { color: var(--tussock); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .cards { grid-template-columns: 1fr; }
+      .details-grid { grid-template-columns: 1fr; gap: 36px; }
+      .cred-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      body { font-size: 16px; }
+      section { padding: 72px 0; }
+      .menu-btn { display: inline-block; }
+      .nav {
+        display: none; position: absolute; top: 70px; right: 16px; left: 16px;
+        flex-direction: column; gap: 0; background: var(--river-deep);
+        border-radius: 12px; padding: 8px; box-shadow: 0 12px 30px rgba(0,0,0,.3);
+      }
+      .nav.open { display: flex; }
+      .nav a { padding: 12px 14px; }
+      .btn-ghost { margin-left: 0; margin-top: 10px; }
+      .hero { min-height: 86vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top">Bannockburn Fishing &amp; Boat Tours</a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav" id="nav">
+        <a href="#experiences">Experiences</a>
+        <a href="#about">About Roger</a>
+        <a href="#details">Trip details</a>
+        <a href="#credentials">Safety</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO — add images/hero.jpg (landscape, ~2000px wide) -->
+    <section class="hero" aria-label="Introduction">
+      <div class="wrap">
+        <h1>Bannockburn Fishing and Boat Tours</h1>
+        <p class="lede">Fish or tour the lower Kawarau River.</p>
+        <div class="hero-badges">
+          <span class="badge">By the hour or by the day</span>
+          <span class="badge">Up to 4 passengers</span>
+          <span class="badge">Maritime NZ certified</span>
+        </div>
+        <a class="btn btn-primary" href="#contact">Contact Roger</a>
+        <a class="btn btn-ghost" href="#experiences">See the experiences</a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section id="experiences">
+      <div class="wrap">
+        <p class="eyebrow">On the lower Kawarau</p>
+        <h2 class="section-title">Fish, explore, or both</h2>
+
+        <div class="cards">
+          <article class="card">
+            <!-- add images/gold-workings.jpg -->
+            <div class="card-media"><img src="images/gold-workings.jpg" alt="Old gold workings beside the lower Kawarau River" loading="lazy" onerror="this.remove()"></div>
+            <div class="card-body">
+              <h3>See the old gold workings</h3>
+              <p>Take in the old gold workings from the water.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <!-- add images/history.jpg -->
+            <div class="card-media"><img src="images/history.jpg" alt="Historic landscape along the lower Kawarau River" loading="lazy" onerror="this.remove()"></div>
+            <div class="card-body">
+              <h3>Learn about the history</h3>
+              <p>Hear the story of the river and the people who worked it.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <!-- add images/fishing.jpg -->
+            <div class="card-media"><img src="images/fishing.jpg" alt="Fishing from the boat on the lower Kawarau River" loading="lazy" onerror="this.remove()"></div>
+            <div class="card-body">
+              <h3>Fish the river</h3>
+              <p>Spend your time on the water with a line in.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ROGER -->
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <!-- add images/roger.jpg (portrait or square) -->
+        <div class="about-media"><img src="images/roger.jpg" alt="Roger, skipper and fishing guide" loading="lazy" onerror="this.parentElement.remove()"></div>
+        <div class="about-text">
+          <p class="eyebrow">Your host</p>
+          <h2 class="section-title">About Roger</h2>
+          <p>Roger is a long-term Bannockburn resident with an extensive knowledge of the area and its history. He is a senior member of the New Zealand Professional Fishing Guides Association and a certified skipper under Maritime New Zealand.</p>
+          <p>A host with your best day at heart, Roger will take you on a memorable journey through the area, with the angling experience only Central Otago scenery and an experienced local can provide.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRIP DETAILS -->
+    <section class="details" id="details">
+      <div class="wrap details-grid">
+        <!-- add images/boat.jpg -->
+        <div class="details-media"><img src="images/boat.jpg" alt="Roger's boat on the Cairnmuir Arm" loading="lazy" onerror="this.remove()"></div>
+
+        <div>
+          <p class="eyebrow">Trip details</p>
+          <h2 class="section-title">How it works</h2>
+          <ul class="facts">
+            <li>
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <div><strong>By the hour or by the day</strong><span>Book a short trip or make a day of it.</span></div>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <div><strong>Tours start from the Cairnmuir Arm</strong><span>Lake Dunstan, Central Otago.</span></div>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+              <div><strong>Transfers to Clyde Old Town</strong><span>Ask Roger when you book.</span></div>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5A5 5 0 0 1 21 20"/></svg></span>
+              <div><strong>Up to 4 passengers</strong><span>Small groups, personal trips.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="credentials" id="credentials">
+      <div class="wrap">
+        <p class="eyebrow">Safety &amp; standards</p>
+        <h2 class="section-title">In safe hands</h2>
+        <div class="cred-row">
+          <div class="cred">
+            <h3>Maritime NZ certified</h3>
+            <p>Both the boat and the skipper are Maritime New Zealand certified.</p>
+          </div>
+          <div class="cred">
+            <h3>NZPFGA senior member</h3>
+            <p>Senior member of the New Zealand Professional Fishing Guides Association.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="eyebrow">Bookings</p>
+        <h2 class="section-title">Contact Roger</h2>
+        <p class="lede">Call Roger to book a trip on the lower Kawarau, by the hour or by the day.</p>
+
+        <a class="phone" href="tel:+6421436870">021 436 870</a>
+        <br>
+        <a class="btn btn-primary" href="tel:+6421436870">Call Roger</a>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="map-section" id="map" aria-label="Map">
+      <div class="wrap">
+        <p class="eyebrow">Where to find us</p>
+        <h2 class="section-title">Tours start from the Cairnmuir Arm</h2>
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d19812.1558854183!2d169.14689387858883!3d-45.071011527859056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snz!4v1794788946161!5m2!1sen!2snz" title="Map of the Cairnmuir Arm and lower Kawarau River" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> Bannockburn Fishing and Boat Tours</span>
+      <span>Trading as Our Man in New Zealand</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    var btn = document.querySelector('.menu-btn');
+    var nav = document.getElementById('nav');
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
