@@ -4,7 +4,7 @@ Upload the site photos here, using these exact names (lowercase, .jpg):
 
 | File | Used for | Shape |
 |---|---|---|
-| hero.jpg | Big photo at the top of the page (Ulrich Lange, Wikimedia Commons, credited in footer) | Landscape, 2000px across |
+| hero.jpg | Big photo at the top of the page (iStock 2213622828, licensed) | Landscape, 2000px across |
 | gold-workings.jpg | "See the old gold workings" card | Landscape |
 | history.jpg | "Learn about the history" card | Landscape |
 | fishing.jpeg | "Fish the river" card | Landscape |

@@ -69,29 +69,28 @@
       color: var(--white);
     }
     .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
-    .brand { font-family: "DM Serif Display", Georgia, serif; font-size: 1.25rem; color: var(--white); text-decoration: none; letter-spacing: .2px; }
+    .brand { font-family: "DM Serif Display", Georgia, serif; font-size: 1.25rem; color: var(--river-deep); text-decoration: none; letter-spacing: .2px; }
     .nav { display: flex; gap: 28px; }
-    .nav a { color: var(--white); text-decoration: none; font-weight: 500; font-size: .95rem; opacity: .9; }
+    .nav a { color: var(--river-deep); text-decoration: none; font-weight: 600; font-size: .95rem; }
     .nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
-    .menu-btn { display: none; background: none; border: 1px solid rgba(255,255,255,.6); color: var(--white); border-radius: 8px; padding: 6px 12px; font: inherit; font-size: .9rem; cursor: pointer; }
+    .menu-btn { display: none; background: rgba(255,255,255,.7); border: 1px solid var(--river-deep); color: var(--river-deep); border-radius: 8px; padding: 6px 12px; font: inherit; font-size: .9rem; cursor: pointer; }
 
     /* ---------- Hero ---------- */
     .hero {
       position: relative;
       min-height: 92vh;
-      display: flex; align-items: flex-end;
+      display: flex; align-items: stretch;
       color: var(--white);
       background-color: var(--river-deep);
-      background-image:
-        linear-gradient(180deg, rgba(8,47,73,.5) 0%, rgba(8,47,73,.1) 28%, rgba(8,47,73,.3) 60%, rgba(8,47,73,.7) 100%), linear-gradient(90deg, rgba(8,47,73,.35) 0%, rgba(8,47,73,0) 60%),
-        url("images/hero.jpg");
+      background-image: url("images/hero.jpg");
       background-size: cover;
-      background-position: center;
-      padding: 140px 0 72px;
+      background-position: center 35%;
+      padding: 104px 0 64px;
     }
-    .hero .wrap { width: 100%; }
-    .hero h1, .hero .lede { text-shadow: 0 1px 2px rgba(0,0,0,.35), 0 2px 18px rgba(0,0,0,.3); }
-    .hero h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); max-width: 14ch; }
+    .hero .wrap { width: 100%; display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
+    .hero h1 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); max-width: none; color: var(--river-deep); text-shadow: 0 1px 12px rgba(255,255,255,.55); }
+    .hero .lede { text-shadow: 0 1px 2px rgba(0,0,0,.45), 0 2px 18px rgba(0,0,0,.35); }
+    .hero .badge { background: rgba(7,89,133,.35); }
     .hero .lede { font-size: clamp(1.1rem, 2vw, 1.35rem); max-width: 46ch; margin: 0 0 32px; opacity: .95; }
     .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
     .badge {
@@ -222,11 +221,6 @@
       .cred-row { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
-      .hero {
-        background-image:
-          linear-gradient(180deg, rgba(8,47,73,.5) 0%, rgba(8,47,73,.35) 25%, rgba(8,47,73,.4) 55%, rgba(8,47,73,.7) 100%),
-          url("images/hero.jpg");
-      }
       body { font-size: 16px; }
       section { padding: 72px 0; }
       .menu-btn { display: inline-block; }
@@ -236,7 +230,7 @@
         border-radius: 12px; padding: 8px; box-shadow: 0 12px 30px rgba(0,0,0,.3);
       }
       .nav.open { display: flex; }
-      .nav a { padding: 12px 14px; }
+      .nav a { padding: 12px 14px; color: var(--white); }
       .btn-ghost { margin-left: 0; margin-top: 10px; }
       .hero { min-height: 86vh; }
     }
@@ -261,10 +255,11 @@
 
   <main id="top">
 
-    <!-- HERO — add images/hero.jpg (landscape, ~2000px wide) -->
+    <!-- HERO: images/hero.jpg (iStock 2213622828, licensed) -->
     <section class="hero" aria-label="Introduction">
       <div class="wrap">
         <h1>Bannockburn Fishing and Boat Tours</h1>
+        <div class="hero-bottom">
         <p class="lede">While in Bannockburn, enjoy the scenery from the river, learn a little of its gold mining history and perhaps even catch a fish!</p>
         <div class="hero-badges">
           <span class="badge">By the hour or by the day</span>
@@ -273,6 +268,7 @@
         </div>
         <a class="btn btn-primary" href="#contact">Contact Roger</a>
         <a class="btn btn-ghost" href="#experiences">See the experiences</a>
+        </div>
       </div>
     </section>
 
@@ -433,7 +429,6 @@
   <footer class="site-footer">
     <div class="wrap">
       <span>&copy; <span id="year">2026</span> Bannockburn Fishing and Boat Tours</span>
-      <span class="credit">Header photo: Ulrich Lange, <a href="https://commons.wikimedia.org/wiki/File:Lake_Dunstan_-_Kawarau_Arm_and_Dunstan_Arm.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, GNU Free Documentation License (colour adjusted)</span>
       <span>Trading as OMINZ Ltd</span>
     </div>
   </footer>
