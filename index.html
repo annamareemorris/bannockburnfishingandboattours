@@ -90,7 +90,7 @@
     .hero .wrap { width: 100%; }
     .hero h1, .hero .lede { text-shadow: 0 1px 2px rgba(0,0,0,.35), 0 2px 18px rgba(0,0,0,.3); }
     .hero h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); max-width: 14ch; }
-    .hero .lede { font-size: clamp(1.15rem, 2.2vw, 1.45rem); max-width: 34ch; margin: 0 0 32px; opacity: .95; }
+    .hero .lede { font-size: clamp(1.1rem, 2vw, 1.35rem); max-width: 46ch; margin: 0 0 32px; opacity: .95; }
     .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
     .badge {
       background: rgba(255,255,255,.14);
@@ -220,6 +220,11 @@
       .cred-row { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
+      .hero {
+        background-image:
+          linear-gradient(180deg, rgba(10,30,32,.5) 0%, rgba(10,30,32,.35) 25%, rgba(10,30,32,.4) 55%, rgba(10,30,32,.7) 100%),
+          url("images/hero.jpg");
+      }
       body { font-size: 16px; }
       section { padding: 72px 0; }
       .menu-btn { display: inline-block; }
@@ -258,7 +263,7 @@
     <section class="hero" aria-label="Introduction">
       <div class="wrap">
         <h1>Bannockburn Fishing and Boat Tours</h1>
-        <p class="lede">Fish or tour the lower Kawarau River.</p>
+        <p class="lede">While in Bannockburn, enjoy the scenery from the river, learn a little of its gold mining history and perhaps even catch a fish!</p>
         <div class="hero-badges">
           <span class="badge">By the hour or by the day</span>
           <span class="badge">Up to 4 passengers</span>
